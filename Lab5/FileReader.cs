@@ -12,13 +12,13 @@ namespace WordUnscrambler
         public string[] Read(string filename)
         {
 
-
-           //string filePath = "C: \\Users\\edwar\\Downloads\\WordUnscrambler_Startup_Code\\WordUnscrambler_Startup_Code\\WordFile"; 
-
             try
             {
-                string content = File.ReadAllText(filePath);
-                //Console.WriteLine("File content:\n" + content);
+                string content = File.ReadAllText(filename);
+                string[] fullContent = content.Split(',');
+
+                return fullContent;
+                
             }
             catch (IOException e)
             {

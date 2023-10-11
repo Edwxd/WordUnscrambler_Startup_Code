@@ -57,6 +57,7 @@ namespace WordUnscrambler
         private static void ExecuteScrambledWordsManualEntryScenario()
         {
 
+
         }
 
         private static void DisplayMatchedUnscrambledWords(string[] scrambledWords)
@@ -69,8 +70,7 @@ namespace WordUnscrambler
 
             foreach (MatchedWord matchedWord in matchedWords)
             {
-                Console.WriteLine(matchedWord.Word.ToString());
-                Console.WriteLine(matchedWord.ScrambledWord.ToString());
+                Console.WriteLine(matchedWord.ToString());
             }
         }
     }
