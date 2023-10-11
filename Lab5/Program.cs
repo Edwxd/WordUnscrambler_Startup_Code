@@ -56,6 +56,7 @@ namespace WordUnscrambler
 
         private static void ExecuteScrambledWordsManualEntryScenario()
         {
+
         }
 
         private static void DisplayMatchedUnscrambledWords(string[] scrambledWords)
