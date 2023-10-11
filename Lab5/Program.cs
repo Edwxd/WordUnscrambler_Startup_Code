@@ -56,6 +56,9 @@ namespace WordUnscrambler
 
         private static void ExecuteScrambledWordsManualEntryScenario()
         {
+            var wordlist = Console.ReadLine();
+            string [] wordlist = wordlist.Split(',');
+            DisplayMatchedUnscrambledWords(wordlist);
 
 
         }
