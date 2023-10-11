@@ -14,11 +14,8 @@ namespace WordUnscrambler
 
             foreach (string sw in scrambledWords)
             {
-               
-
                 foreach (string w in wordList)
                 {
-
                     char[] scrambledWord = sw.ToCharArray();    
                     char[] word = w.ToCharArray();
 
@@ -31,8 +28,6 @@ namespace WordUnscrambler
                     }
 
                     matchedWords.Add(new MatchedWord(word.ToString());
-
-                   
                 }
             }
             // Implement code here.
