@@ -12,21 +12,27 @@ namespace WordUnscrambler
         {
             List<MatchedWord> matchedWords = new List<MatchedWord>();
 
-            foreach (string scrumbeledWords in scrambledWords)
+            foreach (string sw in scrambledWords)
             {
                
 
-                foreach (string word in wordList)
+                foreach (string w in wordList)
                 {
 
-                    
-                   
+                    char[] scrambledWord = sw.ToCharArray();    
+                    char[] word = w.ToCharArray();
 
-                    if(word == scrumbeledWords) 
+                    for(int i = 0; i  < scrambledWord.Length; i++)
                     {
-
-                            
+                        if (scrambledWord[i] != word[i])
+                        {
+                            break;
+                        }
                     }
+
+                    matchedWords.Add(new MatchedWord(word.ToString());
+
+                   
                 }
             }
             // Implement code here.

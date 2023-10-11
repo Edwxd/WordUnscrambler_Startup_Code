@@ -13,7 +13,7 @@ namespace WordUnscrambler
         {
 
 
-            string filePath = "C: \\Users\\edwar\\Downloads\\WordUnscrambler_Startup_Code\\WordUnscrambler_Startup_Code\\WordFile"; 
+           //string filePath = "C: \\Users\\edwar\\Downloads\\WordUnscrambler_Startup_Code\\WordUnscrambler_Startup_Code\\WordFile"; 
 
             try
             {
