@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Globalization;
+using Lab5;
 
 namespace WordUnscrambler
 {
@@ -57,8 +58,8 @@ namespace WordUnscrambler
         private static void ExecuteScrambledWordsManualEntryScenario()
         {
             var wordlist = Console.ReadLine();
-            string [] wordlist = wordlist.Split(',');
-            DisplayMatchedUnscrambledWords(wordlist);
+            string [] wordListArray = wordlist.Split(',');
+            DisplayMatchedUnscrambledWords(wordListArray);
 
 
         }
@@ -66,7 +67,7 @@ namespace WordUnscrambler
         private static void DisplayMatchedUnscrambledWords(string[] scrambledWords)
         {
             //read the list of words from the system file. 
-            string[] wordList = _fileReader.Read("wordlist.txt");
+            string[] wordList = _fileReader.Read(Constants.FILENAME);
 
             //call a word matcher method to get a list of structs of matched words.
             List<MatchedWord> matchedWords = _wordMatcher.Match(scrambledWords, wordList);
