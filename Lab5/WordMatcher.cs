@@ -19,8 +19,17 @@ namespace WordUnscrambler
                     char[] scrambledWord = sw.ToCharArray();    
                     char[] word = w.ToCharArray();
 
-                    for(int i = 0; i  < scrambledWord.Length; i++)
+                    Array.Sort(scrambledWord);
+                    Array.Sort(word);
+
+                    string sortedScrambledWord = new string(scrambledWord);
+                    string sortedWord = new string(word);
+
+                    if (sortedScrambledWord == sortedWord)
                     {
+                        matchedWords.Add(BuildMatchedWord(w, sw));
+                    }
+                   
                         if (scrambledWord[i] != word[i])
                         {
                             break;
