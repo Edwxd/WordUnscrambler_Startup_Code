@@ -23,7 +23,7 @@ namespace WordUnscrambler
                     do
                     {
                         option = Console.ReadLine()?.Trim()?.ToUpper();
-                    } while (option != "F" && option != "M");
+                    } while (option == "F" && option == "M");
 
                     switch (option)
                     {
