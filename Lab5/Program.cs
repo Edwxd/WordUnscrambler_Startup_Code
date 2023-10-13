@@ -18,6 +18,8 @@ namespace WordUnscrambler
         {
             try
             {
+
+
                 Console.WriteLine("Enter scrambled word(s) manually or as a file: F - file / M - manual");
 
                 String option = Console.ReadLine() ?? throw new Exception("String is empty");
@@ -38,7 +40,6 @@ namespace WordUnscrambler
                 }
 
                 Console.ReadLine();
-
 
             }
             catch (Exception ex)

@@ -14,10 +14,9 @@ namespace WordUnscrambler
 
             foreach (string sw in scrambledWords)
             {
-               
                 foreach (string w in wordList)
                 {
-                    char[] scrambledWord = sw.ToCharArray();    
+                    char[] scrambledWord = sw.ToCharArray();
                     char[] word = w.ToCharArray();
 
                     Array.Sort(scrambledWord);
@@ -30,29 +29,20 @@ namespace WordUnscrambler
                     {
                         matchedWords.Add(BuildMatchedWord(w, sw));
                     }
-                   
-                        if (scrambledWord[i] != word[i])
-                        {
-                            break;
-                        }
-                    }
-
-                    matchedWords.Add(new MatchedWord(word.ToString());
                 }
             }
+
             // Implement code here.
-            // Work with "scrambledWords" and "matchedWords".
-
-            MatchedWord BuildMatchedWord(string scrambledWord, string word)
-            { 
-                // Build a mat ched-word object here, so that you can return it.
-
-                //return matchedWord;
-                return new MatchedWord(scrambledWord, word);  // Delete this line when done.
-            }
+            // Work with "scrambledWords" and "matchedWords.
 
             return matchedWords;
-        } 
-    }
+        }
 
+        MatchedWord BuildMatchedWord(string scrambledWord, string word)
+        {
+            return new MatchedWord(scrambledWord, word);
+        }
+    }
 }
+
+
