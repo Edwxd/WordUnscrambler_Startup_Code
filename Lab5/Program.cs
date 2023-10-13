@@ -1,6 +1,7 @@
 ﻿using Lab5;
 using System;
 using System.Collections.Generic;
+using System.Resources;
 
 namespace WordUnscrambler
 {
@@ -18,7 +19,7 @@ namespace WordUnscrambler
             {
                 try
                 {
-                    Console.WriteLine("Enter scrambled word(s) manually or as a file: F - file / M - manual");
+                    Console.WriteLine(en_lang.EntreForM);
 
                     string option;
                     do
@@ -29,26 +30,26 @@ namespace WordUnscrambler
                     switch (option)
                     {
                         case "F":
-                            Console.WriteLine("Enter full path including the file name: (Scrambledwords.txt)");
+                            Console.WriteLine(en_lang.fullpath);
                             ExecuteScrambledWordsInFileScenario();
                             break;
                         case "M":
-                            Console.WriteLine("Enter word(s) manually (separated by commas if multiple): ");
+                            Console.WriteLine(en_lang.entrewords);
                             ExecuteScrambledWordsManualEntryScenario();
                             break;
                         default:
-                            Console.WriteLine("The entered option was not recognized.");
+                            Console.WriteLine(en_lang.optionnotreco);
                             break;
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("The program will be terminated. " + ex.Message);
+                    Console.WriteLine(en_lang.exception + ex.Message);
                 }
 
 
-                Console.WriteLine("Would you like to go again ? (y for yes/ any other key for no)");
+                Console.WriteLine(en_lang.goagain);
                 continueChoice = Console.ReadLine();
 
             } while (continueChoice == "y");

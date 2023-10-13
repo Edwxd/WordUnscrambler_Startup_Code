@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab5;
+using System;
 using System.Collections.Generic;
 
 namespace WordUnscrambler
@@ -16,20 +17,18 @@ namespace WordUnscrambler
                 foreach (string w in wordList)
                 {
                     
+                    
                     char[] scrambledWord = sw.ToCharArray();
                     char[] word = w.ToCharArray();
 
-                   
-                    Array.Sort(scrambledWord);
-                    Array.Sort(word);
+                    extensionclass extensionclass = new extensionclass();
 
-                    string sortedScrambledWord = new string(scrambledWord);
-                    string sortedWord = new string(word);
 
-                    if (sortedScrambledWord == sortedWord)
+                    if(extensionclass.sortWord(scrambledWord, word) == true)
                     {
                         matchedWords.Add(BuildMatchedWord(w, sw));
                     }
+                   
                 }
             }
 
