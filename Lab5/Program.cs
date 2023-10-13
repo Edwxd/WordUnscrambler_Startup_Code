@@ -11,9 +11,9 @@ namespace WordUnscrambler
 
         static void Main(string[] args)
         {
-            bool continueProgram = true;
+            string continueChoice;
 
-            while (continueProgram)
+            do
             {
                 try
                 {
@@ -40,16 +40,22 @@ namespace WordUnscrambler
                             break;
                     }
 
-                Console.ReadLine();
+
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("The program will be terminated. " + ex.Message);
+                }
 
 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("The program will be terminated." + ex.Message);
+                Console.WriteLine("Would you like to go again ? (y for yes/ any other key for no");
+                continueChoice = Console.ReadLine();
 
-            }
+            } while (continueChoice == "y");
         }
+
 
         private static void ExecuteScrambledWordsInFileScenario()
         {
@@ -80,3 +86,4 @@ namespace WordUnscrambler
         }
     }
 }
+
