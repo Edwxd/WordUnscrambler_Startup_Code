@@ -11,11 +11,15 @@ namespace WordUnscrambler
 
             foreach (string sw in scrambledWords)
             {
+                
+
                 foreach (string w in wordList)
                 {
+                    
                     char[] scrambledWord = sw.ToCharArray();
                     char[] word = w.ToCharArray();
 
+                   
                     Array.Sort(scrambledWord);
                     Array.Sort(word);
 
@@ -31,6 +35,7 @@ namespace WordUnscrambler
 
             // Implement code here.
             // Work with "scrambledWords" and "matchedWords.
+
 
             return matchedWords;
         }

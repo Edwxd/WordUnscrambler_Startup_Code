@@ -29,7 +29,7 @@ namespace WordUnscrambler
                     switch (option)
                     {
                         case "F":
-                            Console.WriteLine("Enter full path including the file name: (Scambledwords.txt)");
+                            Console.WriteLine("Enter full path including the file name: (Scrambledwords.txt)");
                             ExecuteScrambledWordsInFileScenario();
                             break;
                         case "M":
