@@ -15,7 +15,6 @@ namespace WordUnscrambler
             foreach (string sw in scrambledWords)
             {
                
-
                 foreach (string w in wordList)
                 {
 
@@ -43,7 +42,7 @@ namespace WordUnscrambler
                 // Build a mat ched-word object here, so that you can return it.
 
                 //return matchedWord;
-                return new MatchedWord();  // Delete this line when done.
+                return new MatchedWord(scrambledWord, word);  // Delete this line when done.
             }
 
             return matchedWords;
