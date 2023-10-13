@@ -25,7 +25,7 @@ namespace WordUnscrambler
                 switch (option.ToUpper())
                 {
                     case "F":
-                        Console.WriteLine("Enter full path including the file name: ");
+                        Console.WriteLine("Enter full path including the file name: (Scambledwords.txt) ");
                         ExecuteScrambledWordsInFileScenario();
                         break;
                     case "M":
