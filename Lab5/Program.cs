@@ -11,6 +11,7 @@ namespace WordUnscrambler
 
         static void Main(string[] args)
         {
+
             string continueChoice;
 
             do
@@ -40,9 +41,6 @@ namespace WordUnscrambler
                             break;
                     }
 
-
-                    
-
                 }
                 catch (Exception ex)
                 {
@@ -50,7 +48,7 @@ namespace WordUnscrambler
                 }
 
 
-                Console.WriteLine("Would you like to go again ? (y for yes/ any other key for no");
+                Console.WriteLine("Would you like to go again ? (y for yes/ any other key for no)");
                 continueChoice = Console.ReadLine();
 
             } while (continueChoice == "y");
